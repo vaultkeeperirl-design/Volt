@@ -30,47 +30,6 @@ Volt is built upon a modern React Native stack:
 
 ## Getting Started
 
-Follow these steps to run Volt locally:
+You can download the latest Android release from our [Releases page](../../releases). Download the APK file directly to your Android device and install it to get started right away!
 
-### Prerequisites
-
-- Node.js (v18 or higher recommended)
-- npm or yarn
-- An iOS Simulator (macOS only) or Android Emulator
-- The Expo Go app on your physical device (optional)
-
-### Installation
-
-1. Clone the repository and navigate to the root directory.
-2. Install the dependencies:
-   ```bash
-   npm install
-   ```
-
-### Running the App
-
-Start the Expo development server:
-
-```bash
-npx expo start
-```
-
-- Press `a` to open in Android Emulator.
-- Press `i` to open in iOS Simulator (macOS only).
-- Scan the QR code with your phone's camera to run via Expo Go.
-
-## Building for Production
-
-Volt utilizes Expo Application Services (EAS) or local builds for generating production artefacts.
-
-To build the Android APK locally using Expo Prebuild:
-
-1. Ensure Android Studio and necessary SDKs are installed.
-2. Run the prebuild command:
-   ```bash
-   npx expo prebuild -p android
-   ```
-3. Navigate to the generated android directory and assemble the release:
-   ```bash
-   cd android && ./gradlew assembleRelease
-   ```
+*Note: For developers, Expo Go local servers run dynamically and the connection QR code changes depending on your local network's IP address. For this reason, we cannot provide a static QR code here.*

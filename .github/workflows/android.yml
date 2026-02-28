@@ -46,3 +46,10 @@ jobs:
         with:
           name: volt-app-release
           path: android/app/build/outputs/apk/release/app-release.apk
+
+      - name: Release APK
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: release-${{ github.sha }}
+          files: android/app/build/outputs/apk/release/app-release.apk
