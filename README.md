@@ -34,4 +34,4 @@ Volt is built upon a modern React Native stack:
 
 ### Running the App
 
-- Download the latest mobile build on our releases page
+- Download the latest mobile build on the [releases](https://github.com/vaultkeeperirl-design/Volt/releases) page
