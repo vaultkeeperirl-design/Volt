@@ -30,6 +30,8 @@ Volt is built upon a modern React Native stack:
 
 ## Getting Started
 
-You can download the latest Android release from our [Releases page](../../releases). Download the APK file directly to your Android device and install it to get started right away!
+- Info coming soon
 
-*Note: For developers, Expo Go local servers run dynamically and the connection QR code changes depending on your local network's IP address. For this reason, we cannot provide a static QR code here.*
+### Running the App
+
+- Download the latest mobile build on the [releases](https://github.com/vaultkeeperirl-design/Volt/releases) page
