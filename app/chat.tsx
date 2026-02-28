@@ -49,7 +49,9 @@ export default function ChatScreen() {
           contentContainerStyle={styles.messageList}
           renderItem={({ item }) => (
             <View style={styles.messageContainer}>
-              <View style={[styles.avatar, { backgroundColor: isDark ? '#5865f2' : '#5865f2' }]} />
+              <View style={[styles.avatar, { backgroundColor: '#5865f2' }]}>
+                <Text style={styles.avatarText}>{item.user.charAt(0).toUpperCase()}</Text>
+              </View>
               <View style={styles.messageContent}>
                 <View style={styles.messageHeader}>
                   <Text style={[styles.username, { color: userNameColor }]}>{item.user}</Text>
@@ -73,7 +75,11 @@ export default function ChatScreen() {
               onChangeText={setInputText}
               onSubmitEditing={handleSend}
             />
-            <TouchableOpacity style={styles.iconButton} onPress={handleSend}>
+            <TouchableOpacity
+              style={[styles.iconButton, { opacity: inputText.trim() ? 1 : 0.5 }]}
+              onPress={handleSend}
+              disabled={!inputText.trim()}
+            >
               <Ionicons name="send" size={20} color={isDark ? '#b5bac1' : '#5c5e66'} />
             </TouchableOpacity>
           </View>
@@ -102,6 +108,13 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 20,
     marginRight: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  avatarText: {
+    color: '#ffffff',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
   messageContent: {
     flex: 1,
@@ -121,7 +134,8 @@ const styles = StyleSheet.create({
   },
   messageText: {
     fontSize: 15,
-    lineHeight: 20,
+    lineHeight: 22,
+    marginTop: 2,
   },
   inputContainer: {
     padding: 16,
@@ -133,6 +147,11 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     paddingHorizontal: 8,
     minHeight: 48,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
   },
   input: {
     flex: 1,

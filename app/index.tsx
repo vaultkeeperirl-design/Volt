@@ -27,11 +27,17 @@ export default function HomeScreen() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <TouchableOpacity
-            style={[styles.channelItem, { backgroundColor: 'transparent' }]}
+            style={[
+              styles.channelItem,
+              {
+                backgroundColor: 'transparent',
+                borderBottomColor: isDark ? '#3f4147' : '#e3e5e8'
+              }
+            ]}
             onPress={() => router.push('/chat')}
             activeOpacity={0.7}
           >
-            <Text style={[styles.hash, { color: isDark ? '#80848e' : '#80848e' }]}>#</Text>
+            <Text style={[styles.hash, { color: isDark ? '#b5bac1' : '#5c5e66' }]}>#</Text>
             <Text style={[styles.channelName, { color: textColor }]}>{item.name}</Text>
           </TouchableOpacity>
         )}
@@ -55,10 +61,12 @@ const styles = StyleSheet.create({
   channelItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: 12,
     paddingHorizontal: 16,
-    borderRadius: 4,
+    borderRadius: 8,
     marginHorizontal: 8,
+    marginBottom: 4,
+    borderBottomWidth: 1,
   },
   hash: {
     fontSize: 20,

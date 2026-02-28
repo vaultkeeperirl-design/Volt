@@ -20,6 +20,16 @@ export default function RootLayout() {
               backgroundColor: colorScheme === 'dark' ? '#313338' : '#ffffff',
             },
             headerTintColor: colorScheme === 'dark' ? '#ffffff' : '#000000',
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+            drawerActiveBackgroundColor: '#5865f2',
+            drawerActiveTintColor: '#ffffff',
+            drawerItemStyle: {
+              borderRadius: 8,
+              marginHorizontal: 8,
+            },
           }}
         >
           <Drawer.Screen
